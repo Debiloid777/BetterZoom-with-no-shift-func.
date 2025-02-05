@@ -30,15 +30,7 @@ internal static class ZoomEdits
 
 		float num = 0.01f * Main.GameZoomTarget; // changed
 
-		if (!Main.keyState.PressingShift()) { // <new />
-			if (PlayerInput.Triggers.Current.ViewZoomIn) {
-				Main.GameZoomTarget = Utils.Clamp(Main.GameZoomTarget + num, Config.minZoom, Config.maxZoom); // changed
-			}
-
-			if (PlayerInput.Triggers.Current.ViewZoomOut) {
-				Main.GameZoomTarget = Utils.Clamp(Main.GameZoomTarget - num, Config.minZoom, Config.maxZoom); // changed
-			}
-		} // <new>
+		
 		else
 		{
 			float num1 = 0.01f * Main.UIScale;
